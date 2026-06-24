@@ -1,0 +1,87 @@
+Exercícios de Java Orientado a Objetos - Polimorfismo
+Senac - RS | Prof.Luís Guilherme
+
+--
+
+Exercício 1: Sistema de Logs de Auditoria
+Objetivo: Criar um simulador de registo de atividades do sistema.
+
+Crie uma classe mãe abstrata chamada RegistradorLog. Ela deve ter um método abstrato gravar(String acao).
+
+Crie três classes filhas: LogEmArquivo, LogEmBancoDeDados e LogNaNuvem.
+
+Em cada classe filha, implemente o método gravar() para imprimir uma mensagem na tela simulando o salvamento (ex: "Salvando em Arquivo de Texto: " + acao).
+
+Na classe principal (com main), use o Scanner para pedir ao usuário que digite uma ação (ex: "Fatura apagada").
+
+Peça ao usuário para escolher o destino do log (1 - Arquivo, 2 - Banco de Dados, 3 - Nuvem).
+
+Instancie a classe correta em uma variável do tipo RegistradorLog e chame o método gravar() (polimorfismo).
+
+--
+
+Exercício 2: Exportador de Relatórios
+Objetivo: Simular a exportação de um texto para diferentes formatos.
+
+Crie uma classe mãe abstrata chamada Exportador com o método abstrato exportar(String dados).
+
+Crie três classes filhas: ExportadorPDF, ExportadorCSV e ExportadorJSON.
+
+Em cada classe filha, implemente o método exportar() para imprimir uma mensagem que simule a conversão. Por exemplo, no PDF: "Gerando páginas e bloqueando edição para: " + dados.
+
+Na classe principal, use o Scanner para ler um texto digitado pelo usuário.
+
+Mostre um menu para o usuário escolher o formato de exportação (1 - PDF, 2 - CSV, 3 - JSON).
+
+Usando polimorfismo, instancie o exportador escolhido e chame o método exportar().
+
+--
+
+Exercício 3: Triagem de Suporte de TI (Helpdesk)
+Objetivo: Encaminhar um chamado de suporte para a equipe correta.
+
+Crie uma classe mãe abstrata chamada TratamentoChamado com o método abstrato encaminhar(String descricaoProblema).
+
+Crie três classes filhas: SuporteHardware, SuporteRede e SuporteSoftware.
+
+Implemente o método encaminhar() em cada filha. O SuporteHardware deve imprimir "Enviando técnico fisicamente para avaliar: " + descricaoProblema, e assim por diante para as outras equipes.
+
+Na classe principal, use o Scanner para pedir que o usuário descreva o seu problema.
+
+Peça para o usuário selecionar a categoria do problema (1 - Hardware, 2 - Rede, 3 - Software).
+
+Use o polimorfismo para instanciar a equipe correta e chame o método encaminhar().
+
+--
+
+Exercício 4: Simulador de Autenticação (Login)
+Objetivo: Validar o acesso de um usuário simulando diferentes métodos de segurança.
+
+Crie uma classe mãe abstrata chamada Autenticador com o método abstrato validarAcesso(String credencial).
+
+Crie três classes filhas: AutenticadorSenha, AutenticadorBiometrico e AutenticadorToken.
+
+Implemente o método validarAcesso() em cada uma, imprimindo mensagens que simulem a validação (ex. no biométrico: "Lendo impressão digital para a credencial: " + credencial).
+
+Na classe principal, mostre um menu perguntando qual método de login o usuário deseja usar.
+
+Use o Scanner para pedir que ele digite a sua "credencial" (pode ser uma senha ou um código simulado).
+
+Guarde a escolha em uma variável do tipo Autenticador e execute a validação polimórfica.
+
+--
+
+Exercício 5: Processador de Vídeo
+Objetivo: Processar um arquivo de vídeo de maneiras diferentes sem alterar o sistema principal.
+
+Crie uma classe mãe abstrata chamada ProcessadorVideo com o método abstrato processar(String nomeArquivo).
+
+Crie três classes filhas: ProcessadorAltaDefinicao, ProcessadorMobile e ProcessadorApenasAudio.
+
+No método processar() de cada classe, imprima mensagens simulando o trabalho específico. Ex: O ProcessadorMobile deve imprimir "Comprimindo vídeo para poupar dados móveis: " + nomeArquivo.
+
+Na classe principal, use o Scanner para pedir o nome do arquivo de vídeo.
+
+Peça ao usuário para escolher o tipo de processamento desejado através de um menu.
+
+Utilizando o conceito de polimorfismo, inicie o processamento com o objeto adequado.

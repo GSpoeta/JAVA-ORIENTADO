@@ -1,0 +1,102 @@
+Exercícios de Java Orientado a Objetos - Polimorfismo 2
+Senac - RS | Prof.Luís Guilherme
+
+--
+
+Exercício 1: Sistema de Frete/Logística (E-commerce)
+Objetivo: Calcular o custo de envio de encomendas utilizando polimorfismo.
+
+Crie uma classe mãe abstrata Frete com os atributos distanciaEmKm (double) e peso (double).
+
+Defina na classe mãe o método abstrato calcularCusto().
+
+Crie duas classes filhas e implemente as fórmulas de cálculo:
+
+FretePadrao: O custo é (0.50 * distanciaEmKm) + (1.00 * peso).
+
+FreteExpresso: O custo é (1.20 * distanciaEmKm) + (2.00 * peso).
+
+Na classe principal (que contém o main), use o Scanner para pedir ao utilizador a distância da entrega e o peso da encomenda.
+
+Apresente um menu para o utilizador escolher o tipo de envio (1 - Padrão, 2 - Expresso).
+
+Instancie a classe correspondente numa variável do tipo Frete e mostre o valor total a pagar chamando o método calcularCusto().
+
+
+--
+
+Exercício 2: Sistema de Portagens / Pedágios
+Objetivo: Calcular o valor da tarifa para diferentes tipos de veículos numa autoestrada.
+
+Crie uma classe mãe abstrata Veiculo com o atributo numeroEixos (int) e o método abstrato calcularTarifa().
+
+Crie três classes filhas e implemente as regras da tarifa:
+
+Motociclo: Retorna sempre o valor de 1.50 (ignore a quantidade de eixos no cálculo).
+
+CarroLigeiro: Retorna sempre o valor de 3.00.
+
+Caminhao: Retorna 3.00 * numeroEixos.
+
+Na classe principal, pergunte ao utilizador qual o tipo de veículo (1 - Motociclo, 2 - Carro Ligeiro, 3 - Camião).
+
+Apenas se o veículo escolhido for um Camião, use o Scanner para perguntar também o número de eixos.
+
+Usando o conceito de polimorfismo, guarde o objeto instanciado e imprima o valor final da tarifa cobrada.
+
+--
+
+Exercício 3: Sistema de Subscrições (SaaS)
+Objetivo: Calcular a mensalidade de um software online consoante o plano escolhido e a quantidade de utilizadores.
+
+Crie a classe mãe abstrata Assinatura com o atributo numeroUsuarios (int) e o método abstrato calcularMensalidade().
+
+Crie três classes filhas com as seguintes regras de negócio:
+
+PlanoBasic: Retorna 10.00 * numeroUsuarios.
+
+PlanoPro: Retorna 20.00 * numeroUsuarios. Regra extra: Se o numeroUsuarios for maior que 10, aplique um desconto de 10% no valor total antes de o retornar.
+
+PlanoEnterprise: Retorna o valor fixo de 500.00 (permitindo acesso ilimitado, logo, ignore o número de utilizadores no cálculo).
+
+Na classe principal, utilize o Scanner para ler o plano desejado e a quantidade de funcionários (utilizadores) que a empresa cliente possui.
+
+Instancie a assinatura correta e mostre o valor da mensalidade a pagar.
+
+--
+
+Exercício 4: Sistema de Precificação de Seguros
+Objetivo: Calcular o valor anual de um seguro de vida aplicando taxas específicas de idade e cobertura.
+
+Crie uma classe mãe abstrata SeguroVida com os atributos idade (int) e valorCobertura (double). Crie o método abstrato calcularPremio().
+
+Crie duas classes filhas:
+
+SeguroStandard: O prémio base é 5% do valor da cobertura (valorCobertura * 0.05). Regra extra: Se a idade do cliente for superior a 50 anos, adicione uma taxa extra de 200.00 ao resultado.
+
+SeguroPremium: O prémio é 8% do valor da cobertura (valorCobertura * 0.08), cobrindo todos os riscos sem qualquer taxa adicional por idade.
+
+Na classe principal, peça a idade do cliente e o valor de cobertura que ele deseja contratar.
+
+Mostre um menu para que o utilizador escolha o tipo de seguro (1 - Standard, 2 - Premium).
+
+Use o polimorfismo para processar o cálculo e imprimir o valor anual a pagar.
+
+--
+
+Exercício 5: Sistema de Rendimento Bancário
+Objetivo: Simular o lucro de um investimento ao longo do tempo.
+
+Crie a classe mãe abstrata Investimento com os atributos valorInicial (double) e meses (int). Defina o método abstrato calcularRendimento().
+
+Crie duas classes filhas com os seus respetivos cálculos:
+
+Poupanca: O lucro é de 0.5% ao mês. Retorne valorInicial * 0.005 * meses.
+
+FundoImobiliario: O lucro bruto é de 1.2% ao mês, mas cobra uma taxa de gestão fixa de 15.00 por mês. Retorne (valorInicial * 0.012 * meses) - (15.00 * meses).
+
+Na classe principal, pergunte ao utilizador o valor que ele quer investir e durante quantos meses o dinheiro vai render.
+
+Peça para selecionar o tipo de investimento num menu.
+
+Invoque o método polimórfico e apresente o lucro final (rendimento) gerado.

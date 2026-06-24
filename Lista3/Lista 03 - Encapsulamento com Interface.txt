@@ -1,0 +1,18 @@
+Lista 03 - Encapsulamento com Interface
+
+1. Conta Bancária: Crie uma interface Conta com os métodos depositar(double valor) e sacar(double valor). Implemente essa interface em uma classe ContaCorrente.
+
+2. Animal: Crie uma interface Animal com o método emitirSom(). Implemente essa interface em classes como Cachorro, Gato e Passaro, cada uma com sua própria implementação de emitirSom().
+
+3 - Funcionário com Interface Pagavel: Crie uma interface Pagavel com o método calcularPagamento(). Implemente essa interface em classes como FuncionarioHorista e FuncionarioAssalariado.
+
+4 - Dispositivos Eletrônicos: Crie uma interface DispositivoEletronico com os métodos ligar(), desligar() e obterStatus(). Implemente essa interface em classes como Televisao, Radio e Celular.
+
+5 - Formas de Pagamento: Crie uma interface FormaPagamento com o método efetuarPagamento(double valor). Implemente essa interface em classes como CartaoCredito, Boleto e Dinheiro.
+
+6 - Dispositivos de Armazenamento: Crie uma interface DispositivoArmazenamento com os métodos armazenarDados(String dados) e recuperarDados(). Implemente essa interface em classes como DiscoRigido, PenDrive e Nuvem.
+
+7 - Sistema de Pedidos Online: Crie uma interface Produto com os métodos obterNome(), obterPreco() e adicionarAoCarrinho(CarrinhoCompras carrinho). Implemente essa interface em classes como Eletronico, Roupa e
+Alimento. Crie uma interface CarrinhoCompras com o método adicionarProduto(Produto produto).
+
+8 - Sistema de Reservas de Hotel: Crie uma interface Quarto com os métodos obterTipo(), obterPrecoDiaria() e reservar(). Implemente essa interface em classes como QuartoStandard, QuartoLuxo e Suite
