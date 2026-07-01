@@ -1,0 +1,48 @@
+Exercício 1: Sistema Bancário (Fintechs): Aplicativos de banco oferecem diferentes tipos de contas para os clientes. Vamos simular as operações básicas de saque e depósito.
+
+Crie uma superclasse chamada ContaBancaria com os atributos numeroConta (Texto) e saldo (Decimal). Crie os métodos depositar(valor) e sacar(valor). O saque normal só deve ocorrer se houver saldo suficiente.
+
+Crie uma subclasse ContaCorrente que herda de ContaBancaria. Adicione o atributo limiteChequeEspecial (Decimal). Modifique (sobrescreva) o método sacar(valor) para que o cliente possa sacar até o valor do saldo somado ao limite do cheque especial.
+
+Na classe Principal, use o Scanner para pedir ao usuário o número da conta e os valores que ele deseja depositar e, em seguida, sacar. Teste a regra do cheque especial.
+
+--
+
+Exercício 2: Gestão de Recursos Humanos (Folha de Pagamento): Empresas de tecnologia possuem diferentes cargos, e a forma de calcular o salário final varia de acordo com os benefícios de cada um.
+
+Crie uma superclasse chamada Funcionario com os atributos nome (Texto) e salarioBase (Decimal). Crie um método calcularSalario() que apenas retorna o salário base.
+
+Crie uma subclasse Desenvolvedor que herda de Funcionario. Adicione o atributo bonusPorProjeto (Decimal). Sobrescreva o método calcularSalario() para retornar o salário base somado ao bônus.
+
+Na classe Principal, use o Scanner para perguntar o nome do desenvolvedor, seu salário base e qual o valor do bônus que ele recebeu no mês. Imprima o resumo do pagamento chamando o método calcularSalario().
+
+--
+
+Exercício 3: Aplicativo de Mobilidade (Tipo Uber / 99): Aplicativos de transporte cobram taxas diferentes dependendo da categoria do veículo escolhido pelo passageiro.
+
+Crie uma superclasse chamada Veiculo com os atributos placa (Texto) e anoFabricacao (Inteiro). Crie um método calcularTaxaUso() que retorna uma taxa base fixa de R$ 10,00.
+
+Crie uma subclasse CarroVIP que herda de Veiculo. Adicione o atributo ofereceAgua (Booleano). Sobrescreva o método calcularTaxaUso() para retornar a taxa base do veículo somada a um acréscimo de R$ 15,00. Crie também um método exibirBeneficios() que avise se o motorista oferece água.
+
+Na classe Principal, use o Scanner para pedir a placa do carro e perguntar (com Sim ou Não) se o motorista oferece água. Instancie o CarroVIP e exiba o valor final da corrida.
+
+--
+
+Exercício 4: Sistema de Notificações (Microsserviços): Sistemas modernos enviam notificações para os usuários por diferentes canais, e cada canal tem suas próprias regras de envio.
+
+Crie uma superclasse chamada Notificacao com os atributos mensagem (Texto) e destinatario (Texto). Crie um método enviar() que exibe a mensagem "Enviando notificação genérica".
+
+Crie uma subclasse NotificacaoSMS que herda de Notificacao. Sobrescreva o método enviar(). A regra de negócio aqui é: o SMS só pode ser enviado (impresso no console) se o tamanho da mensagem for menor ou igual a 160 caracteres. Caso contrário, exiba uma mensagem de erro.
+
+Na classe Principal, use o Scanner para pedir o número de telefone do destinatário e o texto da mensagem. Instancie o objeto e chame o método enviar() para testar a validação do tamanho do texto.
+
+--
+
+Exercício 5: Plataforma de Streaming (Netflix / Spotify)
+Contexto: Serviços de assinatura oferecem diferentes planos, mudando a qualidade de exibição e a presença de anúncios.
+
+Crie uma superclasse chamada Assinatura com os atributos emailUsuario (Texto) e valorMensal (Decimal). Crie um método exibirBeneficios() que imprime o email do usuário e o valor que ele paga.
+
+Crie uma subclasse PlanoPremium que herda de Assinatura. Adicione o atributo qualidade4K (Booleano). Sobrescreva o método exibirBeneficios() chamando primeiro o comportamento da superclasse (dica: use super) e, em seguida, adicionando um texto informando que o plano exibe conteúdo em 4K e não possui anúncios.
+
+Na classe Principal, use o Scanner para perguntar o e-mail de login do cliente. Instancie a classe PlanoPremium (você pode definir o valor da mensalidade fixo no código) e exiba os benefícios na tela.
